@@ -1,0 +1,55 @@
+footer{
+    background-color: $colorGrey;
+    padding: 50px;
+}
+
+.footer__wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left{
+    display: flex;
+    align-items: center;
+    p{
+        font-family: $fontSecond;
+        font-size: 1.2em;
+        line-height: 30px;
+    }
+}
+
+.footer__right{
+    a{
+        content: '';
+        background-size: 100%;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: bottom;
+        margin-right: 5px;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    .tumblr{
+        background-image: url("/isn/wp-content/themes/imageSansNom/dist/assets/tumblr.svg");
+    }
+
+    .facebook{
+        background-image: url("/isn/wp-content/themes/imageSansNom/dist/assets/facebook.svg");
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__left{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}

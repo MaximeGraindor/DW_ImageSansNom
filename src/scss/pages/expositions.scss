@@ -1,0 +1,206 @@
+.expos__intro{
+    background: #E7E8EA;
+    padding: 100px;
+    box-sizing: border-box;
+    color: $colorText;
+
+    .expos__intro__title{
+        font-size: 10em;
+        margin-bottom: 50px;
+        span{
+            display: block;
+            &:first-child{
+                position: relative;
+                &:before{
+                    content: '';
+                    height: 190px;
+                    width: 1100px;
+                    background: $yellowColor;
+                    position: absolute;
+                    left: 0;
+                    opacity: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    .expos__intro__right{
+        img{
+            width: 650px;
+            min-height: 650px;
+            border: 2px solid #E0D105 !important;
+        }
+    }
+}
+
+.expos__intro__content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.expos__intro__description{
+    font-family: $fontSecond;
+    color: $colorText;
+    line-height: 35px;
+    font-size: 1.5em;
+    margin:  20px 10px 0;
+    width: 70%;
+}
+
+
+
+
+.expos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 200px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.expos__card{
+    width: 62%;
+    flex: 0 0 50%;
+    border-bottom: 2px solid $yellowColor;
+    display: flex;
+
+    .expos__card__left{
+        flex: 0 0 50%;
+        img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+    .expos__card__right{
+        flex: 0 0 50%;
+        position: relative;
+        z-index: 2;
+        h3{
+            padding: 20px;
+        }
+        a{
+            font-size: 3.6em;
+            text-decoration: none;
+            color: $colorText;
+        }
+        img{
+            width: 60%;
+            bottom: -46px;
+            left: -100px;
+            position: absolute;
+            box-shadow: 5px 5px $yellowColor;
+            z-index: -1;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1380px){
+    .expos__intro .expos__intro__title {
+        font-size: 7em;
+        margin-bottom: 0.2em;
+    }
+    .expos__intro .expos__intro__right img {
+        width: 450px;
+        min-height: 450px;
+    }
+    .expos__intro .expos__intro__title span:first-child::before {
+        height: 125px;
+        width: 729px;
+    }
+    .expos__intro__description {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 1130px){
+    .expos__card {
+        flex: 0 0 50%;
+        width: 59%;
+    }
+    .expos__card .expos__card__right img {
+        width: 54%;
+    }
+    .expos__card .expos__card__right a {
+        font-size: 2.6em;
+    }
+}
+
+@media screen and (max-width: 1040px){
+    .expos__intro .expos__intro__title {
+        font-size: 5em;
+    }
+    .expos__intro .expos__intro__title span:first-child::before {
+        height: 90px;
+        width: 550px;
+    }
+    .expos__intro .expos__intro__right img {
+        width: 300px;
+        min-height: 300px;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .expos__card .expos__card__right img {
+        width: 53%;
+    }
+    .expos__card .expos__card__right a {
+        font-size: 2em;
+    }
+    .expos__card {
+        width: 88%;
+    }
+    .expos {
+        row-gap: 100px;
+    }
+}
+
+@media screen and (max-width: 790px){
+    .expos__intro__content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .expos__intro .expos__intro__right img {
+        width: 100%;
+        height: auto;
+    }
+    .expos__intro__description {
+        width: 100%;
+        margin: 20px 10px 20px;
+    }
+    .expos__intro .expos__intro__title span:first-child::before {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .expos__card .expos__card__right img {
+        width: 38%;
+    }
+    .expos__card {
+        flex-direction: column-reverse;
+    }
+    .expos__card .expos__card__right img {
+        bottom: -153px;
+        left: 0px;
+    }
+    .expos {
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .expos__intro, .expos {
+        padding: 100px 50px;
+    }
+}

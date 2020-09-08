@@ -1,0 +1,114 @@
+.book{
+    background-color: $colorGrey;
+    padding: 100px;
+    .book__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.book__left{
+    padding-right: 6em;
+    box-sizing: border-box;
+    flex: 0 0 60%;
+    .book__title{
+        font-size: 6em;
+        margin-bottom: 100px;
+        &:after{
+            content: '';
+            display: block;
+            width: 400px;
+            height: 20px;
+            background-color: $yellowColor;
+            margin-top: 20px;
+        }
+    }
+    .book__content{
+        color: $colorText;
+        font-family: $fontSecond;
+        font-size: 1.2em;
+        line-height: 35px;
+        p{
+            margin-bottom: 20px;
+        }
+    }
+
+    .book__back{
+        margin-top: 50px;
+        a{
+            padding: 20px 30px;
+            background-color: $yellowColor;
+            text-decoration: none;
+            font-family: $fontSecond;
+            float: right;
+            border-radius: 2px;
+            color: $colorText;
+        }
+    }
+}
+
+.book__right{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    .book__mainImg{
+        width: 100%;
+        float: right;
+        height: 700px;
+        object-fit: cover;
+        box-shadow: 5px 5px 0px $yellowColor;
+    }
+}
+
+.book__gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    img{
+        width: 30%;
+        height: auto;
+        border: 2px solid $yellowColor;
+    }
+}
+
+.book__video{
+    margin-top: 20px;
+    iframe{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    .book__left .book__title {
+        font-size: 4em;
+        margin-bottom: 39px;
+    }
+    .book__right .book__mainImg {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .book .book__wrap {
+        flex-direction: column;
+    }
+    .book__left {
+        padding-right: 0em;
+        margin-bottom: 50px;
+    }
+    .book__left .book__title::after {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .book__left .book__title {
+        font-size: 3em;
+    }
+
+    .book {
+        padding: 100px 50px;
+    }
+}

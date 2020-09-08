@@ -1,0 +1,21 @@
+body{
+    font-size: 16px;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $fontMain;
+    color: $colorText;
+}
+
+.home__wrap,.contact__wrap, .lieu__wrap, .livres__wrap, .newsletter__wrap, .footer__wrap, .book__wrap, .expos__intro__content, .expo{
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hidden{
+    position: absolute;
+    top: -999px;
+    left: -999px;
+}
+

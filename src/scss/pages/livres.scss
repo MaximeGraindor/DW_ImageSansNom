@@ -1,0 +1,298 @@
+.livres__intro{
+    background: #E7E8EA;
+    padding: 100px;
+    box-sizing: border-box;
+    color: $colorText;
+
+    .livres__intro__title{
+        font-size: 10em;
+        margin-bottom: 0.2em;
+        span{
+            display: block;
+            &:first-child{
+                position: relative;
+                &:before{
+                    content: '';
+                    height: 190px;
+                    width: 1100px;
+                    background: $yellowColor;
+                    position: absolute;
+                    left: 0;
+                    opacity: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+.livres__intro__right{
+    img{
+        width: 650px;
+        min-height: 650px;
+        border: 2px solid #E0D105 !important;
+        object-fit: cover;
+    }
+}
+
+.livres__intro__content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.livres__description{
+    font-family: $fontSecond;
+    font-size: 1.5em;
+    line-height: 32px;
+    width: 72%;
+}
+
+
+.livres__liste{
+    background: $yellowColorLight;
+    padding: 100px;
+    .livres__wrap{
+        max-width: 1330px;
+    }
+}
+
+.livres__liste__search{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.search__form{
+    label{
+        display: block;
+        font-family: $fontSecond;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+     input[type=text]{
+         padding: 10px 20px;
+         width: 300px;
+         border: 1px solid $colorText;
+    }
+    input[type=submit]{
+        padding: 10px 20px;
+        background-image: url("/isn/wp-content/themes/imageSansNom/dist/assets/search.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        margin-left: -5px;
+        border: none;
+        border: 1px solid $colorText;
+        transition: background-size 0.2s ease-in;
+        cursor: pointer;
+        color: black;
+        &:hover{
+            background-size: 70%;
+            color: #EFEFEF;
+        }
+    }
+}
+
+.liste__card{
+    display: flex;
+    &:not(:last-child){
+        margin-bottom: 100px;
+    }
+
+    .liste__card__left{
+        box-shadow: 5px 5px 0 $yellowColor;
+        img{
+            width: 500px;
+            height: 700px;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
+    }
+
+    .liste__card__right{
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        h3{
+            font-size: 3em;
+            padding: 1em;
+            background: $yellowColor;
+            a{
+                text-decoration: none;
+                color: $colorText;
+            }
+        }
+        p{
+            font-family: $fontSecond;
+            font-style: italic;
+            text-align: right;
+            margin-top: 50px;
+            font-size: 2.5em;
+            text-align: right;
+        }
+    }
+}
+
+.livres__pages{
+    max-width: 400px;
+    margin: 4em auto 0;
+    text-align: center;
+    a{
+        margin: 0 10px;
+        font-size: 1.8em;
+        color: $colorText;
+    }
+    .livres__pages__back{
+        background-image: url("/isn/wp-content/themes/imageSansNom/dist/assets/next.svg");
+        background-position: center;
+        background-size: 100%;
+        transform: rotate(180deg);
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+    .livres__pages__next{
+        background-image: url("/isn/wp-content/themes/imageSansNom/dist/assets/next.svg");
+        background-position: center;
+        background-size: 100%;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+//RESPONSIVE
+@media screen and (max-width: 1450px){
+    .livres__intro .livres__intro__title span:first-child:before {
+        height: 142px;
+        width: 650px;
+    }
+    .livres__intro__right img {
+        width: 450px;
+        min-height: 450px;
+    }
+    .livres__intro .livres__intro__title {
+        font-size: 8em;
+    }
+}
+
+@media screen and (max-width: 1450px){
+    .livres__intro .livres__intro__title span:first-child:before {
+        height: 110px;
+        width: 650px;
+    }
+    .livres__intro__right img {
+        width: 450px;
+        min-height: 450px;
+    }
+    .livres__intro .livres__intro__title {
+        font-size: 6em;
+        margin-bottom: 20px;
+    }
+    .livres__description {
+        margin-right: 43px;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .liste__card .liste__card__left img {
+        width: 370px;
+        height: 500px;
+    }
+    .liste__card .liste__card__right h3 {
+        font-size: 2em;
+    }
+    .liste__card .liste__card__right p {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    .livres__intro .livres__intro__title span:first-child:before {
+        height: 110px;
+        width: 450px;
+    }
+    .livres__intro__right img {
+        width: 350px;
+        min-height: 350px;
+    }
+    .livres__intro .livres__intro__title {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+    .livres__description {
+        margin-right: 43px;
+        font-size: 1.2em;
+    }
+    .livres__intro .livres__intro__title span:first-child::before {
+        height: 71px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .livres__intro__content {
+        flex-direction: column;
+    }
+    @media screen and (max-width: 1030px) {
+        .livres__intro__right img {
+            width: 100%;
+        }
+        .livres__intro .livres__intro__title span:first-child::before {
+            width: 100%;
+        }
+    }
+    .livres__description {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .livres__intro__left {
+        text-align: center;
+    }
+
+    .liste__card {
+        flex-direction: column;
+    }
+    .liste__card .liste__card__right {
+        padding-top: 0;
+    }
+
+    .liste__card .liste__card__left img {
+        vertical-align: bottom;
+        width: 100%;
+    }
+
+    .liste__card .liste__card__right h3 {
+        text-align: center;
+    }
+    .liste__card .liste__card__right p {
+        text-align: center;
+    }
+    .livres__liste__search {
+        justify-content: flex-start;
+    }
+
+    .liste__card .liste__card__right h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 610px){
+    .search__form input[type=text] {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .livres__intro, .livres__liste{
+        padding: 100px 50px;
+    }
+    .liste__card .liste__card__left img {
+        height: 400px;
+    }
+    .liste__card .liste__card__right p {
+        margin-top: 25px;
+    }
+
+}

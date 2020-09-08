@@ -1,0 +1,122 @@
+header{
+    padding: 1.9em 6.3em;
+    .header__wrap{
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.header__title{
+    .header__title__link{
+        text-decoration: none;
+        font-family: $fontMain;
+        color: $colorText;
+        font-size: 1.6em;
+        padding: 0;
+        transition: padding 0.2s ease-in-out;
+        &:before{
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 30px;
+            position: absolute;
+            z-index: -1;
+            transition: width 0.5s ease-in-out;
+        }
+        &:hover:before{
+            background-color: $yellowColor;
+            width: 230px;
+        }
+    }
+}
+
+.header__menu{
+    .menu__item{
+        display: inline-block;
+        margin: 0 -4px;
+        .menu__link{
+            text-decoration: none;
+            font-size: 1.32em;
+            font-family: $fontSecond;
+            padding: 1.7em 0.7em;
+            color: $colorText;
+            background-color: rgba(224, 209, 5, 0);
+            transition: background-color 0.2s ease-in-out;
+            &:hover{
+                background-color: rgba(224, 209, 5, 1);
+            }
+        }
+    }
+    .united-kingdom{
+        background-image: url("/isn/wp-content/themes/imageSansNom/dist/assets/united-kingdom.svg");
+        content: '';
+        background-size: 100%;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        vertical-align: bottom;
+        margin-bottom: -5px;
+        margin-left: 20px;
+    }
+}
+
+.close-menu{
+    display: none;
+}
+
+
+.img__responsive{
+    display: none;
+    cursor: pointer;
+    img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+.responsive-menu{
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    background: $colorGrey;
+    border-left: 2px solid $yellowColor;
+    border-bottom: 2px solid $yellowColor;
+    z-index: 2;
+    top: 0;
+    padding: 90px 0;
+    display: block !important;
+    .close-menu{
+        display: block;
+        position: absolute;
+        top: 1.5em;
+        right: 2em;
+        width: 20px;
+        cursor: pointer;
+    }
+    .menu__item{
+        display: block;
+        margin-bottom: 50px;
+        text-align: center;
+        .menu__link{
+            padding: 35px 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 980px){
+    .img__responsive{
+        display: block;
+    }
+    .header__menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    header {
+        padding: 1.9em 2.3em;
+    }
+}

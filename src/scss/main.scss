@@ -1,0 +1,17 @@
+@import 'configs/reset';
+@import 'configs/fonts';
+@import 'configs/variables';
+@import 'configs/global';
+
+@import 'partiels/header';
+
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/lieu';
+
+@import 'pages/expositions';
+@import 'pages/livres';
+@import 'pages/single-book';
+@import 'pages/single-exposition';
+
+@import 'partiels/footer';
